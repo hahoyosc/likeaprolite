@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8  offset-lg-3">
+                    <h3 class="mt-5">Like a pro lite</h3>
+                    <img src="{{ url_for('video_feed1') }}">
+                    <img src="{{ url_for('video_feed2') }}">
+                </div>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type=text/javascript>
+            $(function() {
+                $('a#test').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/background_process_test', function(data) {
+                        //do nothing
+                    });
+                    return false;
+                });
+            });
+        </script>
+
+        <div class='container'>
+            <h3>Test</h3>
+            <form>
+                <a href=# id=test><button class='btn btn-default'>Test</button></a>
+            </form>
+        </div>
+    </body>
+</html>

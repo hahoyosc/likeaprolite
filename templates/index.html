@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<style>
+    .top-buffer { 
+        margin-top: 32px;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4 class="mt-1">Vista previa del video</h4>
+        </div>
+        <div class="col">
+            <h4 class="mt-1">Controles de usuario</h4>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <h5>Cámara 1</h5>
+            <img src="{{ url_for('video_feed1') }}">
+        </div>
+        <div class="col">
+            <div class="container">
+                <div class="row top-buffer">
+                    <div class="col">
+                        <form>
+                            <a href=# id=team_1><button type="button" class='btn btn-dark'>Equipo 1</button></a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form>
+                            <a href=# id=team_2><button type="button" class='btn btn-dark'>Equipo 2</button></a>
+                        </form>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col">
+                        <form>
+                            <a href=# id=goal><button type="button" class='btn btn-dark'>Gol</button></a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form>
+                            <a href=# id=shoot><button type="button" class='btn btn-dark'>Tiro</button></a>
+                        </form>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col">
+                        <form>
+                            <a href=# id=outstanding_play><button type="button" class='btn btn-dark'>Jugada destacada</button></a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form>
+                            <a href=# id=corner><button type="button" class='btn btn-dark'>Corner</button></a>
+                        </form>
+                    </div>   
+                </div>
+                <div class="row top-buffer">
+                    <div class="col">
+                        <form>
+                            <a href=# id=fault><button type="button" class='btn btn-dark'>Falta</button></a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form>
+                            <a href=# id=penalty><button type="button" class='btn btn-dark'>Penalty</button></a>
+                        </form>
+                    </div>   
+                </div>
+                <div class="row top-buffer">
+                    <div class="col">
+                        <form>
+                            <a href=# id=pause><button type="button" class='btn btn-dark'>Pausar grabación</button></a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form>
+                            <a href=# id=export><button type="button" class='btn btn-dark'>Exportar</button></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h5>Cámara 2</h5>
+            <img src="{{ url_for('video_feed2') }}">
+        </div>  
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#camera_1').bind('click', function() {
+            $.getJSON('/camera_1',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#camera_2').bind('click', function() {
+            $.getJSON('/camera_2',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#team_1').bind('click', function() {
+            $.getJSON('/team_1',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#team_2').bind('click', function() {
+            $.getJSON('/team_2',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#goal').bind('click', function() {
+            $.getJSON('/goal',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#shoot').bind('click', function() {
+            $.getJSON('/shoot',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#outstanding_play').bind('click', function() {
+            $.getJSON('/outstanding_play',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#corner').bind('click', function() {
+            $.getJSON('/corner',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#fault').bind('click', function() {
+            $.getJSON('/fault',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#penalty').bind('click', function() {
+            $.getJSON('/penalty',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#pause').bind('click', function() {
+            $.getJSON('/pause',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+
+<script type=text/javascript>
+    $(function() {
+        $('a#export').bind('click', function() {
+            $.getJSON('/export',
+                function(data) {
+                //do nothing
+            });
+            return false;
+        });
+    });
+</script>
+{% endblock %}
