@@ -51,7 +51,7 @@ def create_highlights(htimestrs, videopath1, videopath2, outpath, statspath,
     for i in range(num_clips):
         htime1 = htimes[i]
         hclip1 = video1.subclip(htime1-sus_time, htime1)
-        hclip2 = video2.subclip(htime1+lag_time, htime1+lag_time+add_time)
+        hclip2 = video2.subclip(htime1-sus_time, htime1)
         final_clip = concatenate_videoclips([final_clip, hclip1, hclip2])
         clips.append(hclip1)
         clips.append(hclip2)
