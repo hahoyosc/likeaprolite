@@ -1,5 +1,7 @@
 # exclude everything
 output/*
+venv/*
 
 # exception to the rule
-!output/.gitkeep 
+!output/.gitkeep
+!output/.gitkeep
