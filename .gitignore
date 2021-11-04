@@ -4,4 +4,4 @@ venv/*
 
 # exception to the rule
 !output/.gitkeep
-!output/.gitkeep
+!venv/.gitkeep
