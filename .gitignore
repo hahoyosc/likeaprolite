@@ -1,6 +1,6 @@
 # exclude everything
 output/*
-venv/Lib
+venv/*
 
 # exception to the rule
 !output/.gitkeep
