@@ -1,6 +1,6 @@
 # Import necessary libraries.
 from flask import Flask, render_template, Response, request, redirect, url_for, jsonify
-import cv2
+from cv2 import cv2
 from threading import Thread
 import time
 from datetime import datetime
