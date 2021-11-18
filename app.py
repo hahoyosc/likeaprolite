@@ -5,6 +5,7 @@ from threading import Thread
 import time
 from datetime import datetime
 import os
+from argparse import ArgumentParser
 import sys
 
 # Developed dependencies.
@@ -210,10 +211,9 @@ if show_web:
 # Start the Flask server.
 if __name__ == "__main__":
 
-    for source in range(4):
-        cap = cv2.VideoCapture(source)
-        if cap is None or not cap.isOpened():
-            print('Warning: unable to open video source: ', source)
+    parser = ArgumentParser()
+    parser.add_argument('-n', '--number_cameras', type=int, default=1, required=False, help="Number of cameras",)
+    args = parser.parse_args()
 
     # Initialize the video stream widget threads.
     video_stream_widget = vs.VideoStreamWidget(camlink1, "Camera 1", path1)
