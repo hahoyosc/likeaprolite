@@ -30,12 +30,12 @@
                 <div class="row top-buffer">
                     <div class="col">
                         <form>
-                            <a href=# id=team_1><button type="button" class='btn btn-dark'>Equipo 1</button></a>
+                            <a href=# id=change_team><button type="button" class='btn btn-dark'>Cambiar equipo</button></a>
                         </form>
                     </div>
                     <div class="col">
                         <form>
-                            <a href=# id=team_2><button type="button" class='btn btn-dark'>Equipo 2</button></a>
+                            <a href=# id=start_match><button type="button" class='btn btn-dark'>Iniciar partido</button></a>
                         </form>
                     </div>
                 </div>
@@ -104,8 +104,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#camera_1').bind('click', function() {
-            $.getJSON('/camera_1',
-                function(data) {
+            $.getJSON('/camera_1', function(data) {
                 //do nothing
             });
             return false;
@@ -116,8 +115,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#camera_2').bind('click', function() {
-            $.getJSON('/camera_2',
-                function(data) {
+            $.getJSON('/camera_2', function(data) {
                 //do nothing
             });
             return false;
@@ -127,9 +125,8 @@
 
 <script type=text/javascript>
     $(function() {
-        $('a#team_1').bind('click', function() {
-            $.getJSON('/team_1',
-                function(data) {
+        $('a#change_team').bind('click', function() {
+            $.getJSON('/change_team', function(data) {
                 //do nothing
             });
             return false;
@@ -139,9 +136,8 @@
 
 <script type=text/javascript>
     $(function() {
-        $('a#team_2').bind('click', function() {
-            $.getJSON('/team_2',
-                function(data) {
+        $('a#start_match').bind('click', function() {
+            $.getJSON('/start_match', function(data) {
                 //do nothing
             });
             return false;
@@ -152,8 +148,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#goal').bind('click', function() {
-            $.getJSON('/goal',
-                function(data) {
+            $.getJSON('/goal', function(data) {
                 //do nothing
             });
             return false;
@@ -164,8 +159,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#shoot').bind('click', function() {
-            $.getJSON('/shoot',
-                function(data) {
+            $.getJSON('/shoot', function(data) {
                 //do nothing
             });
             return false;
@@ -176,8 +170,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#outstanding_play').bind('click', function() {
-            $.getJSON('/outstanding_play',
-                function(data) {
+            $.getJSON('/outstanding_play', function(data) {
                 //do nothing
             });
             return false;
@@ -188,8 +181,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#corner').bind('click', function() {
-            $.getJSON('/corner',
-                function(data) {
+            $.getJSON('/corner', function(data) {
                 //do nothing
             });
             return false;
@@ -200,8 +192,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#fault').bind('click', function() {
-            $.getJSON('/fault',
-                function(data) {
+            $.getJSON('/fault', function(data) {
                 //do nothing
             });
             return false;
@@ -212,8 +203,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#penalty').bind('click', function() {
-            $.getJSON('/penalty',
-                function(data) {
+            $.getJSON('/penalty', function(data) {
                 //do nothing
             });
             return false;
@@ -224,8 +214,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#pause').bind('click', function() {
-            $.getJSON('/pause',
-                function(data) {
+            $.getJSON('/pause', function(data) {
                 //do nothing
             });
             return false;
@@ -236,8 +225,7 @@
 <script type=text/javascript>
     $(function() {
         $('a#export').bind('click', function() {
-            $.getJSON('/export',
-                function(data) {
+            $.getJSON('/export', function(data) {
                 //do nothing
             });
             return false;

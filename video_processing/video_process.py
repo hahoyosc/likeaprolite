@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from moviepy.editor import AudioFileClip, VideoFileClip, concatenate_videoclips, ImageClip
 import moviepy.video.fx.all as vfx
+from moviepy.video.fx import resize
 from datetime import datetime
+
 
 def create_highlights(htimestrs, videopath1, videopath2, outpath, statspath,
                       size=(1920, 1080), intropath='intro.mp4', outropath='outro.mp4',

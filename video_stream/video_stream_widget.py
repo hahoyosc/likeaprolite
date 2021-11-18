@@ -3,9 +3,10 @@ from threading import Thread
 
 
 class VideoStreamWidget(object):
-    def __init__(self, link, camname, path, src=0):
+
+    def __init__(self, src, name, path):
         self.record = True
-        self.capture = cv2.VideoCapture(link)
+        self.capture = cv2.VideoCapture(src)
 
         # Resize calculations.
         ratio = 70
@@ -22,8 +23,8 @@ class VideoStreamWidget(object):
         self.thread = Thread(target=self.update, args=())
         self.thread.daemon = True
         self.thread.start()
-        self.camname = camname
-        self.link = link
+        self.name = name
+        self.src = src
         self.path = path
 
         # self.fourcc = cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')
